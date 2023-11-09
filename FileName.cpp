@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <sstream>
 using namespace std;
 
 bool is_opr(char c) {
@@ -58,8 +59,53 @@ string Infix2Postfix(string& s) {
     return result;
 }
 
+int EvaluatePostfixExpression(string& s) {
+    stack<int> stk;
+    stringstream ss(s);
+    string element;
+    while (ss >> element){
+        if (isdigit(element[0])) {
+            stk.push(stoi(element));
+        }
+
+        else{
+            if (stk.size() < 2)
+                throw runtime_error("Invalid postfix expression");
+            
+            int second_element = stk.top();
+            stk.pop();
+            int first_element = stk.top();
+            stk.pop();
+
+            if (element == "+")
+            {
+                stk.push(first_element + second_element);
+            }
+            else if (element == "-")
+            {
+                stk.push(first_element - second_element);
+            }
+            else if (element == "/")
+            {
+                stk.push(first_element / second_element);
+            }
+            else if (element == "*")
+            {
+                stk.push(first_element * second_element);
+            }
+        }
+            
+    }
+    if (stk.size() != 1)
+        throw runtime_error("Invalid postfix expression");
+
+    return stk.top();
+}
 int main() {
     string my_array = "3500 - ((43 * 12) + (47 / 2))";
-    cout << Infix2Postfix(my_array);
+    cout << Infix2Postfix(my_array) << endl;
+    string postfix = Infix2Postfix(my_array);
+    cout << EvaluatePostfixExpression(postfix);
+
     return 0;
 }
