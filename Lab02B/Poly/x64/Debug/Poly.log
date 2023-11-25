@@ -1,0 +1,9 @@
+﻿  Poly.cpp
+C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\Poly.cpp(256,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\Poly.cpp(370,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\Poly.cpp(463,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\Poly.cpp(494,27): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\Poly.cpp(498,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+  Poly.vcxproj -> C:\Users\alper\Masaüstü\Lab02\Lab02\Poly\x64\Debug\Poly.exe
