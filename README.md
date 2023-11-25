@@ -1,4 +1,4 @@
-# VeriLab3
+## Data Structers Assignment 2
 
-This project was given as one of my school's homework assignments. It is used to convert a given equation or expression into an infix expression using operation priorities. The result of the expression in infix form is found by taking into account the behavior of the operators.
+This project was assigned as one of my school's homework assignments. This project allows us to perform operations on an equation received from the user. All of these operations occur within the framework of mathematical rules.
 
